@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/editProfile">
+    <fragment
+        android:id="@+id/profile_doc"
+        android:name="com.example.carelink.Auth.Doctor.Fragment.Profile_doc"
+        android:label="Profile_doc"
+        tools:layout="@layout/fragment_profile_doc">
+
+        <action
+            android:id="@+id/action_profile_doc_to_editProfile"
+            app:destination="@id/editProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.example.carelink.Auth.Doctor.Fragment.EditProfileDetail"
+        android:label="fragment_edit_profile_detail"
+        tools:layout="@layout/fragment_edit_profile_detail" >
+        <action
+            android:id="@+id/action_editProfile_to_profile_doc"
+            app:destination="@id/profile_doc" />
+    </fragment>
+</navigation>
